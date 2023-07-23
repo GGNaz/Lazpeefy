@@ -1,15 +1,16 @@
 "use client";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
-import React, { Suspense, useEffect, useState } from "react";
-import axios from "axios";
-import useSWR from "swr";
-import getUser from "@/utils/getUser";
-import HOCLoading from "@/components/loading/HOCLoading";
-import Navbar from "@/components/navbar/Navbar";
-import Image from "next/image";
+// import Link from "next/link";
+import React from "react";
+// import React, { Suspense, useEffect, useState } from "react";
+// import axios from "axios";
+// import useSWR from "swr";
+// import getUser from "@/utils/getUser";
+// import HOCLoading from "@/components/loading/HOCLoading";
+// import Navbar from "@/components/navbar/Navbar";
+// import Image from "next/image";
 import Logo from "@/components/logo/Logo";
-import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
+import { BsEyeSlashFill } from "react-icons/bs";
 
 export default function Home() {
   const router = useRouter();

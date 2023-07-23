@@ -1,16 +1,7 @@
 "use client";
 
-import Sidebar from "@/components/sidebar/Sidebar";
-import { useRouter } from "next/navigation";
-
-import React, { useEffect } from "react";
+import React from "react";
 
 export default function AdminLayout({ children }: any) {
- 
-  return (
-
-    
-      <div>{children}</div>
-
-  );
+  return <div>{children}</div>;
 }
