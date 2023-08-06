@@ -209,8 +209,8 @@ export default function Cart() {
                                 />
                                 <div className="h-20 w-20  rounded-lg">
                                   <Image
-                                    src={image}
-                                    alt={image}
+                                    src={image ?? ""}
+                                    alt={image ?? ""}
                                     height={100}
                                     width={100}
                                     className="h-full w-full"
