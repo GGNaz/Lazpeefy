@@ -2,7 +2,6 @@
 import React, { Suspense, useEffect } from "react";
 
 export default function Login() {
-  fetchBy;
   useEffect(() => {}, []);
   // cookies().set("name", "lee");
   // console.log("data", data);
