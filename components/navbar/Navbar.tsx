@@ -1,30 +1,43 @@
+"use client";
 import React from "react";
 import Logo from "../logo/Logo";
-import { BsCart2, BsPersonFill } from "react-icons/bs";
+import {
+  BsPlusLg,
+  BsFilter,
+  BsHeartFill,
+  BsCart2,
+  BsPersonFill,
+} from "react-icons/bs";
 import Link from "next/link";
+import { Box, Button } from "@mui/material";
+import { useAppSelector } from "@/redux/hooks";
 export default function Navbar() {
+  const myCart = useAppSelector((state) => state.cartReducer.cart);
+  console.log("🚀 ~ file: page.tsx:36 ~ ViewProducts ~ MyCart:", myCart);
   return (
-    <div className="fixed z-50 top-0 left-0 px-5 py-2 w-full backdrop:blur-sm bg-gradient-to-b from-customblack/70 to-transparent">
-      <div className="flex flex-row justify-between">
-        <div>
+    <Box className="fixed left-0 top-0 z-50 w-full bg-gradient-to-b from-customblack/70 to-transparent px-5 py-2 backdrop:blur-sm">
+      <Box className="flex flex-row justify-between">
+        <Box>
           {" "}
           <Link href="/admin/home">
             <Logo withBrandname={true} color="text-white" />
           </Link>
-        </div>
-        <div className="px-5 flex flex-row gap-5 items-center justify-center">
+        </Box>
+        <Box className="flex flex-row items-center justify-center gap-5 px-5">
           <Link href="/admin/cart" className="relative">
-            <BsCart2 className="text-white text-2xl" />
-            <div className="absolute -top-1 -right-2 bg-white p-2 rounded-full h-4 w-4 flex justify-center items-center text-xs font-medium">
-              1
-            </div>
+            <BsCart2 className="text-2xl text-white" />
+            {myCart?.length > 0 && (
+              <div className="absolute -right-2 -top-1 flex h-4 w-4 animate-pulse items-center justify-center rounded-full bg-white p-2 text-xs font-medium">
+                {myCart?.length}
+              </div>
+            )}
           </Link>
-          <button className="hover:bg-darkviolet/30 border py-1 px-4 text-white rounded-lg flex flex-row gap-2 items-center justify-center">
+          <Button className="flex flex-row items-center justify-center gap-2 rounded-lg border px-4 py-1 text-white hover:bg-darkviolet/30">
             <BsPersonFill className="text-lg" />
             <span>Login</span>
-          </button>
-        </div>
-      </div>
-    </div>
+          </Button>
+        </Box>
+      </Box>
+    </Box>
   );
 }
