@@ -19,7 +19,7 @@ export default function Navbar() {
       <Box className="flex flex-row justify-between">
         <Box>
           {" "}
-          <Link href="/admin/home">
+          <Link href="/">
             <Logo withBrandname={true} color="text-white" />
           </Link>
         </Box>

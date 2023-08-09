@@ -60,7 +60,7 @@ export default function ViewProducts({ params: { id } }: any) {
               alignItems: "center",
             }}
           >
-            <Link href={"/admin/home"}>Home</Link>
+            <Link href={"/"}>Home</Link>
             <MuiIcons.ArrowForwardIosRounded
               sx={{
                 color: "gray",

@@ -1,13 +1,6 @@
-import Link from "next/link";
+"use client";
+import PageNotFound from "@/components/pagenotfound/PageNotFound";
 
 export default function NotFound() {
-  return (
-    <div>
-      <h2>Not Found 12312</h2>
-      <p>Could not find requested resource</p>
-      <p>
-        View <Link href="/blog">all posts</Link>
-      </p>
-    </div>
-  );
+  return <PageNotFound />;
 }

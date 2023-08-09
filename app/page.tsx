@@ -118,7 +118,7 @@ export default function Homepage() {
         height: "100%",
         width: "100%",
         backgroundColor: "rgb(241 245 249 / var(--tw-bg-opacity))",
-        overflowY: "scroll",
+        // overflowY: "scroll",
       }}
       // className="h-full w-full flex flex-col bg-slate-100 overflow-y-scroll "
     >
@@ -509,7 +509,9 @@ export default function Homepage() {
           </Box>
         </Container>
       </Box>
-      <div className="h-56">{/* <Footer /> */}</div>
+      <div className="h-56">
+        <Footer />{" "}
+      </div>
     </Box>
   );
 }
